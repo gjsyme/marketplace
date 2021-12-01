@@ -1,10 +1,9 @@
-# Create Auction House ☼☽
+# Mirage Market
 
-  ![Auction House Montage](https://zora.fleek.co/ipfs/bafybeif2khqr7vgziycirzgl6rd7sdb74pcp2nkhzcxwejh4iu2lky7rs4)
+<!-- ![Mirage Over Wave](/mirage_over_wave.jpeg) -->
 
-A repo to bootstrap your own permissionless auction house with the Zora protocol. This template will get you started with the display of any Erc721 token collection using Zora's rendering components and data hooks along with the inclusion of web3 components so users can connect their wallets and manage NFT's that they own within a specified collection.
-
-[More about the Zora Auction House on Mirror](https://zora.mirror.xyz/UwQwplCMEe1T5eUkp0CpTDJjZXvAK3eeakskTaQe3pE)
+Augmented Reality's permissionless auction house, built on the Zora protocol. 
+<!-- This template will get you started with the display of any Erc721 token collection using Zora's rendering components and data hooks along with the inclusion of web3 components so users can connect their wallets and manage NFT's that they own within a specified collection. -->
 
 ## Features
 1. uses [`@zoralabs/nft-components`](https://github.com/ourzora/nft-components) to render NFTs and auction info.
@@ -15,7 +14,7 @@ A repo to bootstrap your own permissionless auction house with the Zora protocol
 6. uses `typescript`
 7. based on [next.js](https://nextjs.org/)
 
-## Getting Started
+<!-- ## Getting Started
 Simply use this repo as a next.js template replacing [project-name] with the title of your auction house.
 
 ```bash
@@ -41,7 +40,7 @@ NEXT_PUBLIC_RPC_URL=[address to web3 rpc url provider]
 ```
 
 If you include a rpcUrl on the manage auction hooks provider it enables walletconnect,
-without that rpcUrl walletconnect will not work work. We have set included and .env variable for this: ```NEXT_PUBLIC_RPC_URL```. [Further reading on RPC providers](https://web3py.readthedocs.io/en/stable/providers.html) / [Alchemy Ethereum API Docs](https://docs.alchemy.com/alchemy/documentation/apis/ethereum).
+without that rpcUrl walletconnect will not work work. We have set included and .env variable for this: ```NEXT_PUBLIC_RPC_URL```. [Further reading on RPC providers](https://web3py.readthedocs.io/en/stable/providers.html) / [Alchemy Ethereum API Docs](https://docs.alchemy.com/alchemy/documentation/apis/ethereum). -->
 
 ## Develop
 
