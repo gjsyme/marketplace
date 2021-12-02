@@ -1,32 +1,23 @@
-import React, { Children } from "react";
-import { useRouter } from "next/router";
-import cx from "classnames";
-import Link, { LinkProps } from "next/link";
+import { Link, Text } from '@chakra-ui/react';
+import React from 'react';
 
-type NavLinkProps = React.PropsWithChildren<LinkProps> & {
-  activeClassName?: string;
+// compose the link and its text in case we want to get fancy
+const NavLinkText = (props: {children: string | React.ReactChildren | React.ReactChild}) => {
+  if(typeof props.children === 'string'){
+    return (<Text fontSize="xl" textTransform="uppercase">{props.children}</Text>);
+  }else{
+    return <>{props.children}</>;
+  }
 };
-
-export const NavLink = ({
-  children,
-  activeClassName = "active",
-  ...props
-}: NavLinkProps) => {
-  const { asPath } = useRouter();
-  const child = Children.only(children) as React.ReactElement;
-  const childClassName = child.props.className || "";
-
-  const isActive = asPath === props.href || asPath === props.as;
-  const pathName = `${asPath}`.split('/')[1]
-  const activePath = pathName === '' ? 'index' : pathName
-
-  const className = cx(childClassName, activePath, { [activeClassName]: isActive });
-
-  return (
-    <Link {...props}>
-      {React.cloneElement(child, {
-        className: className || null
-      })}
-    </Link>
-  );
-};
+export const NavLink = (props: {href: string, isExternal?: boolean, children: string | React.ReactChildren | React.ReactChild}) => (
+  <Link 
+    isExternal={props.isExternal}
+    href={props.href} 
+    p={4} 
+    color="gray.900" 
+    _hover={{ backgroundColor: "gray.100" }} 
+    borderRadius="sm"
+  >
+    <NavLinkText>{props.children}</NavLinkText>
+  </Link>
+);

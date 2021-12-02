@@ -10,7 +10,6 @@ Augmented Reality's permissionless auction house, built on the Zora protocol.
 2. includes [`@zoralabs/nft-hooks`](https://github.com/ourzora/nft-hooks) for more custom applications.
 3. uses [`@zoralabs/manage-auction-hooks`](https://github.com/ourzora/manage-auction-hooks) for auction interactions.
 4. uses [`@zoralabs/simple-wallet-provider`](https://github.com/ourzora/simple-wallet-provider) for an easy wallet login flow.
-5. uses `@emotion`: [emotion.sh](https://emotion.sh) for styling.
 6. uses `typescript`
 7. based on [next.js](https://nextjs.org/)
 
@@ -68,7 +67,7 @@ Or click the button below:
 
 ## Extras!
 + [Start of with some static designs using this .sketch design template](https://zora.fleek.co/ipfs/bafybeifqr3uoascyyrz3i7k2yjzzcdck4g54kvubqzlapchjvquwf5wlcu) - if you prefer Figma you can import the [sketch.app file](https://help.figma.com/hc/en-us/articles/360040514273-Import-files-from-Sketch).
-+ Minimal styling has been added to the styles/GlobalStyles.tsx, we love [@emotion](https://emotion.sh/docs/introduction) as it integrates with @zoralabs/nft-components - go ahead and uncomment the styling in styles/theme.ts to see it in action.
+- go ahead and uncomment the styling in styles/theme.ts to see it in action.
 + A few additional styling patterns have been included: the usage of css variables, styling mixins & styled components. None of this is necessary - feel free to style as you wish!
 + An example page is included - ```custom-thumbnails.tsx``` - in this page we are adding some css classes to the nft thumbnails based on auction state.
 + We've included a markdown rendering component to allow for the easy addition of formatted copy. See it in action in the about page.

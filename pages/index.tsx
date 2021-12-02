@@ -1,7 +1,11 @@
-import styled from "@emotion/styled";
 import Head from "../components/head";
-import { PageWrapper } from "../styles/components";
 import { GetStaticProps } from "next";
+import { 
+  Heading,
+  HStack,
+  Text,
+  VStack 
+} from '@chakra-ui/react';
 
 import { AuctionsList } from "../components/AuctionsList";
 
@@ -13,11 +17,16 @@ import {
 
 export default function Home({ tokens }: { tokens: any }) {
   return (
-    <IndexWrapper>
-      <Head />
-      <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
-      <AuctionsList tokens={tokens} />
-    </IndexWrapper>
+    <HStack minH="100vh">
+      <VStack>
+        <Text>filters and stuff here</Text>
+      </VStack>
+      <VStack>
+        <Head />
+        <Heading mt="1em">{process.env.NEXT_PUBLIC_APP_TITLE}</Heading>
+        <AuctionsList tokens={tokens} />
+      </VStack>
+    </HStack>
   );
 }
 
@@ -41,7 +50,3 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 60,
   };
 };
-
-const IndexWrapper = styled(PageWrapper)`
-  max-width: var(--content-width-xl);
-`;

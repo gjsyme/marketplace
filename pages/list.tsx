@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import {
   AuctionManager,
   useManageAuction,
@@ -17,7 +16,6 @@ import { Fragment, useContext } from "react";
 import useSWR from "swr";
 
 import Head from "../components/head";
-import { PageWrapper } from "./../styles/components";
 
 const ListItemComponent = () => {
   const {
@@ -159,36 +157,15 @@ export default function List() {
           LIST_MEDIA_DESCRIPTION: `Set the reserve price to list your NFT on ${process.env.NEXT_PUBLIC_APP_TITLE}`,
         }}
       >
-        <ListWrapper>
+        <>
           <ConnectWallet />
           {account &&
             <div className="owned-list">
               <RenderOwnedList account={account} />
             </div>
           }
-        </ListWrapper>
+        </>
       </AuctionManager>
     </>
   );
 }
-
-const ListWrapper = styled(PageWrapper)`
-  max-width: var(--content-width-lg);
-  .owned-list {
-    padding-top: var(--space-md);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .owned-list-no-tokens {
-    text-align: center;
-    padding-top: var(--space-sm);
-  }
-  .list-component-wrapper {
-    padding: var(--base-unit) 0;
-    border-top: var(--border-light);
-  }
-  .thumbnail-manage-button {
-    margin: 0 auto var(--space-sm)!important;
-  }
-`;

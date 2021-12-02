@@ -7,7 +7,6 @@ import {
 } from "@zoralabs/nft-hooks";
 import { GetServerSideProps } from "next";
 
-import { PageWrapper } from "../../../styles/components";
 import Head from "../../../components/head";
 
 const styles = {
@@ -45,14 +44,14 @@ export default function Piece({
         networkId={process.env.NEXT_PUBLIC_NETWORK_ID as NetworkIDs}
         style={styles}
       >
-        <PageWrapper>
+        <>
           <NFTFullPage
             useBetaIndexer={true}
             contract={query.contract as string}
             id={query.id as string}
             initialData={initialData}
           />
-        </PageWrapper>
+        </>
       </MediaConfiguration>
     </>
   );
