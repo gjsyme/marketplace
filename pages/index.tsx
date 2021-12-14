@@ -4,7 +4,7 @@ import {
   Heading,
   HStack,
   Text,
-  VStack 
+  VStack,
 } from '@chakra-ui/react';
 
 import { AuctionsList } from "../components/AuctionsList";
@@ -16,16 +16,23 @@ import {
 } from "@zoralabs/nft-hooks";
 
 export default function Home({ tokens }: { tokens: any }) {
+
   return (
-    <HStack minH="100vh">
-      <VStack>
-        <Text>filters and stuff here</Text>
+    <HStack align="start">
+      <VStack maxW={'20vw'} minH={'60vh'}>
+        <Text fontSize="xl">Menu Header</Text>
+        <VStack>
+          <Text>Item One</Text>
+          <Text>Item Two</Text>
+        </VStack>
       </VStack>
-      <VStack>
-        <Head />
-        <Heading mt="1em">{process.env.NEXT_PUBLIC_APP_TITLE}</Heading>
-        <AuctionsList tokens={tokens} />
-      </VStack>
+      <HStack minH="90vh">
+        <VStack>
+          <Head />
+          <Heading mt="1em">{process.env.NEXT_PUBLIC_APP_TITLE}</Heading>
+          <AuctionsList tokens={tokens} />
+        </VStack>
+      </HStack>
     </HStack>
   );
 }
