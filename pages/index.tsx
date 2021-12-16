@@ -3,11 +3,11 @@ import { GetStaticProps } from "next";
 import { 
   Heading,
   HStack,
-  Text,
   VStack,
 } from '@chakra-ui/react';
 
 import { AuctionsList } from "../components/AuctionsList";
+import { FilterPanel } from "../components/FilterPanel";
 
 import {
   FetchStaticData,
@@ -19,13 +19,7 @@ export default function Home({ tokens }: { tokens: any }) {
 
   return (
     <HStack align="start">
-      <VStack maxW={'20vw'} minH={'60vh'}>
-        <Text fontSize="xl">Menu Header</Text>
-        <VStack>
-          <Text>Item One</Text>
-          <Text>Item Two</Text>
-        </VStack>
-      </VStack>
+      <FilterPanel/>
       <HStack minH="90vh">
         <VStack>
           <Head />
