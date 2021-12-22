@@ -19,6 +19,7 @@ export const Header = () => {
           <HStack>
             <NavLink href="/list">List</NavLink>
             <NavLink href="/about">About</NavLink>
+            {/* should do wallet content here */}
           </HStack>
         </HStack>
       </header>
